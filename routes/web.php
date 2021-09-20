@@ -33,12 +33,10 @@ Route::get('/cart', [CartController::class, 'Cart']);
 
 Route::get('/products', [ProductController::class, 'Products']);
 
-Route::get('product/{id?}', function($id = 1) {
-    return 'Je suis la page produit ' . $id . ' !';
-});
+Route::get('/products/{id?}', [ProductController::class, 'Products']);
 
 // Route::get('/', [WelcomeController::class, 'index'])->name('home');
 
-Route::get('/product/{n?}', function($n = 1) {
-    return 'Je suis la page produit ' . $n . ' !';
-});
+// Route::get('/product/{n?}', function($n = 1) {
+//     return 'Je suis la page produit ' . $n . ' !';
+// });

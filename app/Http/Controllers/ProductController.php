@@ -10,4 +10,9 @@ class ProductController extends Controller
     {
         return view('product-list');
     }
+
+    public function productId($id)
+    {
+        return view('product-details')->with('Produit', $id);
+    }
 }
