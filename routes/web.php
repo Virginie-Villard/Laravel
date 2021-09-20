@@ -22,14 +22,14 @@ use Illuminate\Support\Facades\Route;
 // Route::get('3', function() { return 'Je suis la page 3 !'; });
 
 Route::get('/', function() {
-    return 'Home page';
+    return view('homepage.blade');
 });
 
 Route::get('/cart', function() {
-    return 'Panier : ';
+    return view('cart');
 });
 
-Route::get('/products', function() {
+Route::get('/product-list.blade', function() {
     return 'Liste des produits';
 });
 
