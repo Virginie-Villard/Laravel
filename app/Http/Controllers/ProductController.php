@@ -13,6 +13,6 @@ class ProductController extends Controller
 
     public function productId($id)
     {
-        return view('product-details')->with('Produit', $id);
+        return view('product-details')->with('product', $id);
     }
 }

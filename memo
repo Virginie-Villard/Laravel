@@ -1,2 +1,8 @@
 Mémo de structure des fichiers :
 
+Dans la partie route, on retrouve mon fichier web qui comporte mes routes
+
+Dans la partie app, on retrouve les controllers
+app/Http/Controllers/ (tous mes controllers)
+
+Dans la partie resources, on retrouve mes views

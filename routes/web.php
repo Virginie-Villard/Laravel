@@ -29,14 +29,18 @@ use App\Http\Controllers\CartController;
 
 Route::get('/', [HomePageController::class, 'home']);
 
-Route::get('/cart', [CartController::class, 'Cart']);
+Route::get('/cart', [CartController::class, 'cart']);
 
-Route::get('/products', [ProductController::class, 'Products']);
+Route::get('/products', [ProductController::class, 'products']);
 
-Route::get('/products/{id?}', [ProductController::class, 'Products']);
+// Route::get('/product/{id?}', [ProductController::class, 'products']);
+Route::get('/product/{id?}', [ProductController::class, 'productId'])->where('id', '[0-9]+');
 
 // Route::get('/', [WelcomeController::class, 'index'])->name('home');
 
 // Route::get('/product/{n?}', function($n = 1) {
 //     return 'Je suis la page produit ' . $n . ' !';
 // });
+
+// http://127.0.0.1:8000/
+// php artisan serve

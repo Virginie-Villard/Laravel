@@ -1,12 +1,10 @@
 @extends('template')
  
 @section('titre')
-    Catalogue
+    Artcile n° {{ $product }}
 @endsection
 
 @section('contenu')
-    <p>Benvenue dans notre Catalogue !</p>
+    <p>Description de l'article n° {{ $product }}</p>
 @endsection
-
-
 
