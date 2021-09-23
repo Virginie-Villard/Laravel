@@ -15,17 +15,6 @@ use App\Http\Controllers\CartController;
 |
 */
 
-// Route::get('/', function () {
-//     return view('welcome');
-// });
-
-// Route::get('1', function() { return 'Je suis la page 1 !'; });
-// Route::get('2', function() { return 'Je suis la page 2 !'; });
-// Route::get('3', function() { return 'Je suis la page 3 !'; });
-
-// Route::get('/', function() {
-//     return view('homepage.blade');
-// });
 
 Route::get('/', [HomePageController::class, 'home']);
 
@@ -33,14 +22,4 @@ Route::get('/cart', [CartController::class, 'cart']);
 
 Route::get('/products', [ProductController::class, 'products']);
 
-// Route::get('/product/{id?}', [ProductController::class, 'products']);
 Route::get('/product/{id?}', [ProductController::class, 'productId'])->where('id', '[0-9]+');
-
-// Route::get('/', [WelcomeController::class, 'index'])->name('home');
-
-// Route::get('/product/{n?}', function($n = 1) {
-//     return 'Je suis la page produit ' . $n . ' !';
-// });
-
-// http://127.0.0.1:8000/
-// php artisan serve

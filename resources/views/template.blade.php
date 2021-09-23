@@ -26,7 +26,7 @@
     <header class="site-header">
   <div class="wrapper site-header__wrapper">
     <a href="/" class="brand"><h1>@yield('titre')</h1></a>
-    <p>@yield('contenu')</P>
+    
     <nav class="nav">
       <button class="nav__toggle" aria-expanded="false" type="button">
         menu
@@ -38,6 +38,9 @@
       </ul>
     </nav>
   </div>
+
+  <p>@yield('contenu')</P>
+  
 </header>
         
     </body>
