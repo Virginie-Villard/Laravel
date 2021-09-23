@@ -10,7 +10,15 @@
     @foreach($products as $product)
         <a href="/product/{{ $product->id }}" class="displayProduct">
             <p>{{$product->name}};</p>
-            <p>{{$product->price}} €</p>
+            <p>
+                @if($product->price>100)
+                    {{$product->price}} €, c'est cher !
+                
+                @else
+                    {{$product->price}} €, ça va ! ;)
+
+                @endif
+            </p>
         </a>
     @endforeach
 @endsection

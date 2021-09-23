@@ -22,6 +22,12 @@ class ProductController extends Controller
     public function productId($id)
     {
         $product = Product::where('id', $id)->first();
-        return view('product-details', array('product'=>$product));
+        if($product) {
+            return view('product-details', array('product'=>$product));
+        }
+        else {
+            return view('error');
+        }
+        
     }
 }
