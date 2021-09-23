@@ -7,12 +7,17 @@ use App\Models\Product;
 
 class ProductController extends Controller
 {
-    public function products()
+    public function productsByName()
     {
-        $products = Product::all()->sortBy('price');
+        $products = Product::orderBy('name')->get();
         return view('product-list', array('products'=>$products));
     }
 
+    public function productsByPrice()
+    {
+        $products = Product::orderBy('price')->get();
+        return view('product-list', array('products'=>$products));
+    }
     
     public function productId($id)
     {

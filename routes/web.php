@@ -20,6 +20,8 @@ Route::get('/', [HomePageController::class, 'home']);
 
 Route::get('/cart', [CartController::class, 'cart']);
 
-Route::get('/products', [ProductController::class, 'products']);
+Route::get('/products/name', [ProductController::class, 'productsByName']);
+
+Route::get('/products/price', [ProductController::class, 'productsByPrice']);
 
 Route::get('/product/{id?}', [ProductController::class, 'productId'])->where('id', '[0-9]+');

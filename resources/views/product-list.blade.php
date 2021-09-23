@@ -8,9 +8,10 @@
     <h2>Benvenue dans notre Catalogue !</h2>
 
     @foreach($products as $product)
-        <p>{{$product->name}};</p>
-        <p>{{$product->price}} €</p>
-    
+        <a href="/product/{{ $product->id }}" class="displayProduct">
+            <p>{{$product->name}};</p>
+            <p>{{$product->price}} €</p>
+        </a>
     @endforeach
 @endsection
 
