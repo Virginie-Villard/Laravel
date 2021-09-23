@@ -16,7 +16,7 @@ class ProductController extends Controller
     
     public function productId($id)
     {
-        $product = Product::find($id);
-        return view('product-details')->with('product', $id);
+        $product = Product::where('id', $id)->first();
+        return view('product-details', array('product'=>$product));
     }
 }

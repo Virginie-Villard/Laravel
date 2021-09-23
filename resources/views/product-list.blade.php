@@ -5,7 +5,7 @@
 @endsection
 
 @section('contenu')
-    <p>Benvenue dans notre Catalogue !</p>
+    <h2>Benvenue dans notre Catalogue !</h2>
 
     @foreach($products as $product)
         <p>{{$product->name}};</p>

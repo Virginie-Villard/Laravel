@@ -1,10 +1,11 @@
 @extends('template')
  
 @section('titre')
-    Artcile n° {{ $product }}
+    {{ $product->name }}
 @endsection
 
 @section('contenu')
-    <p>Description de l'article n° {{ $product }}</p>
+    <p>{{ $product->name }}</p>
+    <p>{{ $product->price }} €</p>
 @endsection
 
